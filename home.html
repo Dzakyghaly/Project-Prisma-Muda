@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Penting untuk HP -->
     <title>Prisma Muda 2025</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #E0F7FA; /* Biru muda */
-            font-family: Arial, sans-serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e0f7fa;
+        font-family: Arial, sans-serif;
+      }
 
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: #000000;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .button {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .proyek {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .cashflow {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      .spreadsheet {
+        background-color: #2196f3;
+        color: #ffffff;
+      }
+
+      .button:hover {
+        opacity: 0.85;
+      }
+
+      /* Mobile-friendly font & padding tweaks */
+      @media (max-width: 480px) {
         .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+          margin: 20px;
+          padding: 16px;
         }
 
         h1 {
-            color: #000000;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 32px;
-            text-align: center;
+          font-size: 20px;
         }
 
         .button {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 16px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
+          font-size: 16px;
+          padding: 12px;
         }
-
-        .proyek {
-            background-color: #FFFFFF;
-            color: #000000;
-        }
-
-        .cashflow {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
-
-        .spreadsheet {
-            background-color: #2196F3;
-            color: #FFFFFF;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>PRISMA MUDA 2025</h1>
-
-<button class="button proyek" onclick="location.href='proyek.html'">⭐ PROYEK</button>
-    <button class="button cashflow">🗂️ CASH FLOW</button>
-    <button class="button spreadsheet">📊 SPREADSHEET</button>
-</div>
-
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PRISMA MUDA 2025</h1>
+      <button class="button proyek" onclick="location.href='proyek.html'">
+        ⭐ PROYEK
+      </button>
+      <button class="button cashflow">🗂️ CASH FLOW</button>
+      <button class="button spreadsheet">📊 SPREADSHEET</button>
+    </div>
+  </body>
 </html>

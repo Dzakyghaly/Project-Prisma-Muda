@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsive viewport -->
     <title>Proyek 2025</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #E0F7FA; /* Biru muda */
-            font-family: Arial, sans-serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e0f7fa;
+        font-family: Arial, sans-serif;
+      }
 
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 24px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 24px;
+        color: #000000;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        font-size: 18px;
+        margin-bottom: 14px;
+        padding-left: 24px;
+        position: relative;
+        word-wrap: break-word;
+      }
+
+      li::before {
+        content: "➤";
+        position: absolute;
+        left: 0;
+        color: #2196f3;
+        font-weight: bold;
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #2196f3;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 480px) {
         .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 24px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin: 20px;
+          padding: 16px;
         }
 
         h2 {
-            font-size: 22px;
-            text-align: center;
-            margin-bottom: 24px;
-            color: #000000;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
+          font-size: 20px;
         }
 
         li {
-            font-size: 18px;
-            margin-bottom: 12px;
-            padding-left: 24px;
-            position: relative;
+          font-size: 16px;
         }
-
-        li::before {
-            content: "➤";
-            position: absolute;
-            left: 0;
-            color: #2196F3;
-            font-weight: bold;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #2196F3;
-        }
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>⭐ PROYEK 2025 💰</h2>
-    <ul>
+  </head>
+  <body>
+    <div class="container">
+      <h2>⭐ PROYEK 2025 💰</h2>
+      <ul>
         <li><a href="dpt.html">DPT</a></li>
         <li><a href="tamar.html">TAMAR VILLAGE</a></li>
         <li><a href="masjid.html">MASJID HUNAIRA</a></li>
         <li><a href="uditch.html">UDITCH</a></li>
         <li><a href="workshop.html">WORKSHOP</a></li>
-    </ul>
-</div>
-
-</body>
+      </ul>
+    </div>
+  </body>
 </html>

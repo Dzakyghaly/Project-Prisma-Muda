@@ -1,109 +1,141 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
- |
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- RESPONSIVE -->
+    <title>TAMAR VILLAGE</title>
+    <style>
+      body {
+        background-color: #e0f7fa;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <meta charset="UTF-8">
-  <title>TAMAR VILLAGE</title>
-  <style>
-    body {
-      background-color: #E0F7FA;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+      .container {
+        max-width: 420px;
+        margin: 40px auto;
+        padding: 24px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .container {
-      max-width: 400px;
-      margin: 40px auto;
-      padding: 24px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 24px;
+        color: #000;
+      }
 
-    h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 24px;
-      color: #000;
-    }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
+      .row span {
+        font-size: 18px;
+        color: #000;
+        flex: 1 1 50%;
+      }
 
-    .row span {
-      font-size: 18px;
-      color: #000;
-    }
+      .box {
+        flex: 1 1 45%;
+        height: 35px;
+        background-color: #f1f1f1;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 8px;
+      }
 
-    .box {
-      width: 160px;
-      height: 30px;
-      background-color: #f1f1f1;
-      border: 1px solid #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-    }
+      .link {
+        font-size: 18px;
+        margin-top: 12px;
+        margin-bottom: 8px;
+        color: #000;
+        text-decoration: underline;
+        cursor: pointer;
+      }
 
-    .link {
-      font-size: 18px;
-      margin-top: 12px;
-      margin-bottom: 8px;
-      color: #000;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
+      @media (max-width: 480px) {
+        .container {
+          margin: 20px;
+          padding: 16px;
+        }
 
-<div class="container">
-  <h2>TAMAR VILLAGE</h2>
+        h2 {
+          font-size: 20px;
+        }
 
-  <div class="row">
-    <span>➤ Pemasukan</span>
-    <div class="box" id="tagihan">Loading...</div>
-  </div>
+        .row span {
+          font-size: 16px;
+        }
 
-  <div class="row">
-    <span>➤ Pengeluaran</span>
-    <div class="box" id="belanja">Loading...</div>
-  </div>
+        .box {
+          font-size: 15px;
+          width: 100%;
+        }
 
-  <div class="row">
-    <span>➤ Margin</span>
-    <div class="box" id="profit">Loading...</div>
-  </div>
+        .link {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>TAMAR VILLAGE</h2>
 
-  <div class="link">➤ Progres</div>
-  <div class="link">➤ Foto proyek</div>
-</div>
+      <div class="row">
+        <span>➤ Pemasukan</span>
+        <div class="box" id="tagihan">Loading...</div>
+      </div>
 
-<script>
-  fetch("https://script.google.com/macros/s/AKfycbzsf1NkmywSOBs6KYq8KweDUerZG3IG6a5BsiB4WMz8IhyX8yDaBWSOJGqWQFxIO77LDA/exec")
-    .then(res => {
-      if (!res.ok) throw new Error("HTTP Error: " + res.status);
-      return res.json();
-    })
-    .then(data => {
-      document.getElementById("tagihan").textContent = data.TAGIHAN.toLocaleString('id-ID');
-      document.getElementById("belanja").textContent = data.TOTALBELANJA.toLocaleString('id-ID');
-      document.getElementById("profit").textContent = data.profit.toLocaleString('id-ID');
-    })
-    .catch(err => {
-      console.error("Gagal ambil data:", err);
-      document.getElementById("tagihan").textContent = "ERR";
-      document.getElementById("belanja").textContent = "ERR";
-      document.getElementById("profit").textContent = "ERR";
-    });
-</script>
+      <div class="row">
+        <span>➤ Pengeluaran</span>
+        <div class="box" id="belanja">Loading...</div>
+      </div>
 
-</body>
+      <div class="row">
+        <span>➤ Margin</span>
+        <div class="box" id="profit">Loading...</div>
+      </div>
+
+      <div class="link">➤ Progres</div>
+      <div class="link">➤ Foto proyek</div>
+    </div>
+
+    <script>
+      fetch(
+        "https://script.google.com/macros/s/AKfycbzsf1NkmywSOBs6KYq8KweDUerZG3IG6a5BsiB4WMz8IhyX8yDaBWSOJGqWQFxIO77LDA/exec"
+      )
+        .then((res) => {
+          if (!res.ok) throw new Error("HTTP Error: " + res.status);
+          return res.json();
+        })
+        .then((data) => {
+          document.getElementById("tagihan").textContent =
+            data.TAGIHAN.toLocaleString("id-ID");
+          document.getElementById("belanja").textContent =
+            data.TOTALBELANJA.toLocaleString("id-ID");
+          document.getElementById("profit").textContent =
+            data.profit.toLocaleString("id-ID");
+        })
+        .catch((err) => {
+          console.error("Gagal ambil data:", err);
+          document.getElementById("tagihan").textContent = "ERR";
+          document.getElementById("belanja").textContent = "ERR";
+          document.getElementById("profit").textContent = "ERR";
+        });
+    </script>
+  </body>
 </html>
