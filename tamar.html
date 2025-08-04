@@ -3,90 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- RESPONSIVE -->
     <title>TAMAR VILLAGE</title>
     <style>
       body {
-        background-color: #e0f7fa;
-        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .container {
         max-width: 420px;
-        margin: 40px auto;
-        padding: 24px;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        background: #ffffff;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in-out;
       }
 
       h2 {
         text-align: center;
-        font-size: 24px;
-        margin-bottom: 24px;
-        color: #000;
+        font-size: 26px;
+        color: #00796b;
+        margin-bottom: 28px;
+        letter-spacing: 1px;
       }
 
       .row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
         flex-wrap: wrap;
       }
 
       .row span {
         font-size: 18px;
-        color: #000;
+        color: #004d40;
         flex: 1 1 50%;
       }
 
       .box {
         flex: 1 1 45%;
-        height: 35px;
-        background-color: #f1f1f1;
-        border: 1px solid #000;
+        background-color: #e0f2f1;
+        border: 2px solid #004d40;
+        color: #004d40;
+        height: 40px;
+        font-weight: bold;
+        font-size: 17px;
+        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-weight: bold;
-        font-size: 16px;
-        margin-top: 8px;
+        transition: background-color 0.3s;
+      }
+
+      .box:hover {
+        background-color: #b2dfdb;
       }
 
       .link {
         font-size: 18px;
-        margin-top: 12px;
-        margin-bottom: 8px;
-        color: #000;
-        text-decoration: underline;
+        margin-top: 16px;
+        color: #00796b;
+        text-decoration: none;
+        display: inline-block;
         cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .link:hover {
+        color: #004d40;
+        text-decoration: underline;
       }
 
       @media (max-width: 480px) {
-        .container {
-          margin: 20px;
-          padding: 16px;
-        }
-
         h2 {
-          font-size: 20px;
+          font-size: 22px;
         }
 
-        .row span {
+        .row span,
+        .box,
+        .link {
           font-size: 16px;
         }
 
         .box {
-          font-size: 15px;
           width: 100%;
+          margin-top: 8px;
         }
+      }
 
-        .link {
-          font-size: 16px;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     </style>
