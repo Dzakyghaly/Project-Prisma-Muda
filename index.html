@@ -88,7 +88,7 @@
   <body>
     <div class="login-container">
       <h2>Login</h2>
-      <form action="index.html" method="get">
+      <form onsubmit="return validateLogin()">
         <div class="form-group">
           <label for="username">Username</label>
           <input
@@ -111,5 +111,20 @@
         <p class="note">Belum punya akun? Hubungi admin.</p>
       </form>
     </div>
+
+    <script>
+      function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "prismamuda" && password === "1234") {
+          window.location.href = "home.html";
+          return false; // cegah form submit default
+        } else {
+          alert("Username atau password salah!");
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
