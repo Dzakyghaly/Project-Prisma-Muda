@@ -6,31 +6,27 @@
     <title>TAMAR VILLAGE</title>
     <style>
       body {
-        background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background: linear-gradient(to right, #b2ebf2, #e0f7fa);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
 
       .container {
         max-width: 420px;
-        width: 90%;
-        background: #ffffff;
-        padding: 32px;
+        margin: 50px auto;
+        padding: 28px 24px;
+        background-color: #ffffff;
         border-radius: 16px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 1s ease-in-out;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
       }
 
       h2 {
         text-align: center;
         font-size: 26px;
-        color: #00796b;
         margin-bottom: 28px;
+        color: #00695c;
         letter-spacing: 1px;
       }
 
@@ -38,75 +34,73 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
         flex-wrap: wrap;
       }
 
       .row span {
         font-size: 18px;
-        color: #004d40;
-        flex: 1 1 50%;
+        font-weight: 500;
+        color: #333333;
       }
 
       .box {
-        flex: 1 1 45%;
-        background-color: #e0f2f1;
-        border: 2px solid #004d40;
-        color: #004d40;
-        height: 40px;
-        font-weight: bold;
-        font-size: 17px;
+        width: 160px;
+        height: 36px;
+        background-color: #e3f2fd;
+        border: 2px solid #0288d1;
         border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: background-color 0.3s;
-      }
-
-      .box:hover {
-        background-color: #b2dfdb;
+        font-weight: bold;
+        font-size: 18px;
+        color: #0288d1;
+        margin-top: 8px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
       }
 
       .link {
         font-size: 18px;
-        margin-top: 16px;
-        color: #00796b;
+        color: #0288d1;
         text-decoration: none;
-        display: inline-block;
-        cursor: pointer;
-        transition: color 0.3s;
+        display: block;
+        margin: 14px 0;
+        font-weight: 500;
+        border-left: 4px solid #0288d1;
+        padding-left: 12px;
+        transition: all 0.3s ease;
       }
 
       .link:hover {
-        color: #004d40;
-        text-decoration: underline;
+        color: #01579b;
+        padding-left: 16px;
       }
 
       @media (max-width: 480px) {
+        .container {
+          margin: 24px;
+          padding: 20px;
+        }
+
         h2 {
           font-size: 22px;
         }
 
-        .row span,
-        .box,
-        .link {
+        .row span {
           font-size: 16px;
+          width: 100%;
+          margin-bottom: 6px;
         }
 
         .box {
           width: 100%;
-          margin-top: 8px;
+          height: 42px;
+          font-size: 16px;
         }
-      }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        .link {
+          font-size: 16px;
         }
       }
     </style>
@@ -130,8 +124,8 @@
         <div class="box" id="profit">Loading...</div>
       </div>
 
-      <div class="link">➤ Progres</div>
-      <div class="link">➤ Foto proyek</div>
+      <a class="link" href="#">➤ Progres</a>
+      <a class="link" href="perumahan.jpg">➤ Foto proyek</a>
     </div>
 
     <script>
