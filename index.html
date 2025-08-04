@@ -1,74 +1,115 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Prisma Muda 2025</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Login</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #E0F7FA; /* Biru muda */
-            font-family: Arial, sans-serif;
-        }
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(120deg, #2980b9, #6dd5fa);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        h1 {
-            color: #000000;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 32px;
-            text-align: center;
-        }
+      .login-container {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+      }
 
-        .button {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 16px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+      .login-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #2980b9;
+      }
 
-        .proyek {
-            background-color: #FFFFFF;
-            color: #000000;
-        }
+      .form-group {
+        margin-bottom: 20px;
+      }
 
-        .cashflow {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+      }
 
-        .spreadsheet {
-            background-color: #2196F3;
-            color: #FFFFFF;
-        }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+      }
 
-        .button:hover {
-            opacity: 0.85;
-        }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: #2980b9;
+        outline: none;
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 12px;
+        background-color: #2980b9;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .btn-login:hover {
+        background-color: #2573a6;
+      }
+
+      .note {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+      }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>PRISMA MUDA 2025</h1>
-
-<button class="button proyek" onclick="location.href='proyek.html'">⭐ PROYEK</button>
-    <button class="button cashflow">🗂️ CASH FLOW</button>
-    <button class="button spreadsheet">📊 SPREADSHEET</button>
-</div>
-
-</body>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="index.html" method="get">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Masukkan username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-login">Masuk</button>
+        <p class="note">Belum punya akun? Hubungi admin.</p>
+      </form>
+    </div>
+  </body>
 </html>
